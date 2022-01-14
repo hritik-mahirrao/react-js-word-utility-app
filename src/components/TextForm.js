@@ -12,6 +12,10 @@ export default function TextForm(props) {
     setText(newText);
   }
 
+  const clearText = () =>{
+    setText("");
+  }
+
   const onHandleChange = (event) => {
     setText(event.target.value);
   };
@@ -36,6 +40,9 @@ export default function TextForm(props) {
         </button>
         <button className="btn btn-primary m-2" onClick={handleLowClick}>
           Convert to lowercase
+        </button>
+        <button className="btn btn-primary m-2" onClick={clearText}>
+          Clear
         </button>
       </div>
       <div className="container my-3">
