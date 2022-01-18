@@ -31,6 +31,7 @@ export default function TextForm(props) {
             className="form-control"
             value={text}
             onChange={onHandleChange}
+            style={{backgroundColor: props.mode === "light" ? "white" : "grey"}}
             id="exampleFormControlTextarea1"
             rows="8"
           ></textarea>
