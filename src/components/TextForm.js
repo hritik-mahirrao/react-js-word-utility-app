@@ -7,14 +7,14 @@ export default function TextForm(props) {
     setText(newText);
   };
 
-  const handleLowClick = () =>{
+  const handleLowClick = () => {
     let newText = text.toLowerCase();
     setText(newText);
-  }
+  };
 
-  const clearText = () =>{
+  const clearText = () => {
     setText("");
-  }
+  };
 
   const onHandleChange = (event) => {
     setText(event.target.value);
@@ -31,7 +31,9 @@ export default function TextForm(props) {
             className="form-control"
             value={text}
             onChange={onHandleChange}
-            style={{backgroundColor: props.mode === "light" ? "white" : "grey"}}
+            style={{
+              backgroundColor: props.mode === "light" ? "white" : "grey",
+            }}
             id="exampleFormControlTextarea1"
             rows="8"
           ></textarea>
@@ -48,7 +50,9 @@ export default function TextForm(props) {
       </div>
       <div className="container my-3">
         <h1>Text</h1>
-        <p>{text.split(" ").length} words and {text.length} characters</p>
+        <p>
+          {text.split(" ").length} words and {text.length} characters
+        </p>
       </div>
     </>
   );
